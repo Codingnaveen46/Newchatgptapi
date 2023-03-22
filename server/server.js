@@ -28,7 +28,7 @@ app.post('/', async (req, res) => {
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `${prompt}`,
-        temperature: 0.7,
+        temperature: 0.5,
         max_tokens: 3000,
         top_p: 1,
         frequency_penalty: 0,
@@ -44,6 +44,6 @@ app.post('/', async (req, res) => {
   }
 })
 
-app.listen(5000, () => console.log('AI server started on https://codewithnaveen.onrender.com'))
+app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
 
 
